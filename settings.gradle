@@ -1,0 +1,10 @@
+rootProject.name = 'jax-rx-test'
+include 'resteasy-jetty'
+include 'resteasy-tomcat'
+include 'resteasy-undertow'
+include 'jersey-jetty'
+include 'cxf-jetty'
+include 'jax-rs'
+include 'resteasy-spring-boot'
+include 'cxf-spring-boot'
+

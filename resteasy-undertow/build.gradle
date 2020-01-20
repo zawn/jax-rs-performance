@@ -1,0 +1,27 @@
+plugins {
+    id 'java'
+}
+
+
+sourceCompatibility = 1.8
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    compile project(':jax-rs')
+    // https://mvnrepository.com/artifact/org.jboss.resteasy/resteasy-core
+    compile 'org.jboss.resteasy:resteasy-core:4.4.2.Final'
+    // https://mvnrepository.com/artifact/org.jboss.resteasy/resteasy-jackson2-provider
+    compile 'org.jboss.resteasy:resteasy-jackson2-provider:4.4.2.Final'
+
+    // https://mvnrepository.com/artifact/org.jboss.resteasy/resteasy-undertow
+    compile group: 'org.jboss.resteasy', name: 'resteasy-undertow', version: '4.4.2.Final'
+
+    // https://mvnrepository.com/artifact/io.undertow/undertow-servlet
+    compile group: 'io.undertow', name: 'undertow-servlet', version: '2.0.29.Final'
+
+
+    testCompile group: 'junit', name: 'junit', version: '4.12'
+}

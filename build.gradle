@@ -1,0 +1,37 @@
+group 'org.example'
+version '1.0-SNAPSHOT'
+
+buildscript {
+    repositories {
+        mavenLocal()
+        maven { url "https://maven.aliyun.com/repository/central" }
+        mavenCentral()
+
+        maven { url "https://repo1.maven.org/maven2/" }
+        jcenter()
+    }
+
+    dependencies {
+        classpath "org.springframework.boot:spring-boot-gradle-plugin:$springBootVersion"
+        classpath 'org.springframework:springloaded:1.2.5.RELEASE'
+        classpath "com.netflix.nebula:gradle-lint-plugin:0.27.0"
+        classpath 'com.netflix.nebula:gradle-info-plugin:3.+'
+    }
+}
+
+subprojects {
+    apply plugin: "idea"
+    apply plugin: 'java'
+    apply plugin: 'war'
+
+    repositories {
+        mavenLocal()
+        mavenCentral()
+
+        maven { url "https://maven.aliyun.com/repository/central" }
+        maven { url "https://repo1.maven.org/maven2/" }
+        jcenter()
+    }
+
+    [compileJava, javadoc, compileTestJava]*.options*.encoding = 'UTF-8'
+}
