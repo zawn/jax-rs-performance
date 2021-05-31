@@ -5,6 +5,7 @@ include 'resteasy-undertow'
 include 'jersey-jetty'
 include 'cxf-jetty'
 include 'jax-rs'
-include 'resteasy-spring-boot'
+include 'resteasy-spring-boot-tomcat'
+include 'resteasy-spring-boot-undertow'
 include 'cxf-spring-boot'
 
